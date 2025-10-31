@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>شركة العلم </title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin-top: 50px;
+    }
+    img.logo {
+      width: 200px;
+      height: auto;
+    }
+    h1 {
+      font-size: 36px;
+      margin-top: 20px;
+    }
+    h2 {
+      font-size: 28px;
+      margin-top: 40px;
+    }
+    p {
+      font-size: 14px;
+      margin-top: 10px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .small-images {
+      margin-top: 15px;
+    }
+    .small-images img,
+    img.whatsapp {
+      width: 80px;
+      height: auto;
+      margin: 0 10px;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+    .message-box {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      padding: 20px;
+      max-width: 600px;
+      font-size: 14px;
+      z-index: 1000;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+    .close-btn {
+      margin-top: 15px;
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <img src="al3lm.png" alt="شعار" class="logo" />
+  <h1>بالتعاون مع مصرف الوحدة</h1>
+  <h2>من نحن ؟</h2>
+  <p>
+    شركة العلم هي شركة إلكترونية للمساعدات الدولية بالتعاون مع ليبيا و مصرف
+    الوحدة الليبي نقدم مساعدات غذائية و دوائية لأهل غزة في فلسطين
+  </p>
+  <h2>كيف نعمل ؟</h2>
+  <p>
+    بعد ان تتبرع يتم تحويل اموالك من عملة دينار الليبي الى عملة USDT المشفرة و بعدها نرسل هذه الأموال إلى شركات الكبيرة مثل Walmart في امريكا و Edeka في ألمانيا و هذه الشركات هي الذي تقوم بإرسال الغذاء و الدواء إلى فلسطين
+  </p>
+  <h2>كيفية العمل معنا ؟</h2>
+  <p>
+    يمكنك ان تعمل معنا لنشر المساعدة في كل مكان و ايضاً لكسب دخل جديد يساعدك
+    ( للتواصل و العمل اضغط على صورة الواتساب الظاهرة أمامك للتواصل مع خدمة
+    العملاء )
+  </p>
+  <a href="https://wa.me/qr/XTQEVV4KWIAUN1" target="_blank">
+    <img src="what’s.png" alt="واتساب" class="whatsapp" />
+  </a>
+  <h2>عدد المتبرعين حاليا 231</h2>
+  <p>
+    يمكنك التبرع عبر بينانس بعملة USDT أو تبرع من حسابك في مصرف الوحدة اختر
+    طريقة مناسبة لك
+  </p>
+  <div class="small-images">
+    <img src="Binns.jpg" alt="Binns" onclick="showMessage('binance')" />
+    <img src="Wanda.jpeg" alt="Wanda" onclick="showMessage('bank')" />
+  </div>
+
+  <!-- Binance Message -->
+  <div id="binance-message" class="message-box">
+    <p>للتبرع عن طريق بينانس افعل هذه الخطوات</p>
+    <p>واحد اختر شبكة TRX</p>
+    <p>اثنان قم بتحويل الأموال إلى عنوان الإيداع هذا 👇</p>
+    <p><strong>TP1Hh7HVzC4V49RrRSSCPsPfFurZ24dGtb</strong></p>
+    <button class="close-btn" onclick="hideMessages()">فهمت</button>
+  </div>
+
+  <!-- Bank Message -->
+  <div id="bank-message" class="message-box">
+    <p>للتبرع عن طريق حسابك في مصرف الوحدة افعل هذه الخطوات</p>
+    <p>قم بتحويل الأموال إلى هذا الحساب 👇</p>
+    <p><strong>016000222200025</strong></p>
+    <p>👇عند تحويل على هذا الرقم يجب ان يظهر هذا الاسم</p>
+    <p><strong>ابوبكر علي التومي التليسي</strong></p>
+    <button class="close-btn" onclick="hideMessages()">فهمت</button>
+  </div>
+
+  <script>
+    function showMessage(type) {
+      hideMessages();
+      if (type === "binance") {
+        document.getElementById("binance-message").style.display = "block";
+      } else if (type === "bank") {
+        document.getElementById("bank-message").style.display = "block";
+      }
+    }
+
+    function hideMessages() {
+      document.getElementById("binance-message").style.display = "none";
+      document.getElementById("bank-message").style.display = "none";
+    }
+  </script>
+</body>
+</html>
